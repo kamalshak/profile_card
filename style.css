@@ -1,0 +1,70 @@
+.body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #e1f8fe;
+}
+.wrap {
+  padding: 50px;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  min-width: 280px;
+  min-height: 400px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'PT Sans Narrow', sans-serif;
+  border: 1px solid gray;
+}
+.card__img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  clip-path: circle(400px at center 100px);
+  transition: all .5s ease;
+  z-index: 1000;
+}
+.card__img {
+  width: 280px;
+  width: 120%;
+}
+.card__text-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.3s ease;
+}
+.card:hover > .card__img-container {
+  object-fit: cover;
+  clip-path: circle(100px at center 102px);
+}
+.card:hover > .card__text-container {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.button {
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #000;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.button:link, .button:visited {
+  color: #fff;
+}
+.button:hover, .button:active {
+  color: red;
+}
